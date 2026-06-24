@@ -2444,6 +2444,53 @@
     z-index:12 !important;
   }
 }
+/* ===== FIX FINAL: SCROLL BUTTON MOBILE TIDAK TERTUTUP BACKGROUND PUTIH ===== */
+@media (max-width:880px){
+
+  .hero{
+    overflow:visible !important;
+    position:relative !important;
+    z-index:20 !important;
+  }
+
+  .hero-bottom{
+    overflow:visible !important;
+    position:relative !important;
+    z-index:30 !important;
+    height:96px !important;
+  }
+
+  .hero-bottom::before,
+  .hero-bottom::after{
+    z-index:0 !important;
+    pointer-events:none !important;
+  }
+
+  .scroll-btn{
+    position:absolute !important;
+    left:50% !important;
+    bottom:-44px !important;
+    transform:translateX(-50%) !important;
+    width:88px !important;
+    height:88px !important;
+    z-index:9999 !important;
+    display:grid !important;
+    place-items:center !important;
+    background:var(--gold) !important;
+    color:var(--ink) !important;
+    border-radius:50% !important;
+    pointer-events:auto !important;
+  }
+
+  .scroll-btn::after{
+    z-index:-1 !important;
+  }
+
+  .about{
+    position:relative !important;
+    z-index:1 !important;
+  }
+}
 </style>
 </head>
 <body>
